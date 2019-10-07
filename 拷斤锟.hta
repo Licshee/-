@@ -1,0 +1,16 @@
+<textarea id=t rows=20 style="width: 100%">ï¿½ï¿½</textarea>
+<button id=b>¿½½ïï¿</button>
+<script>
+function b::onclick(){
+if(!~t.value.indexOf("ï¿½ï¿½"))return;
+with(new ActiveXObject("ADODB.Stream")){
+  Type = 2;
+  Charset = "GB2312";
+  Open();
+  WriteText(t.value);
+  Position = 0;
+  Charset = "UTF-8";
+  t.value = ReadText();
+}
+}
+</script>
