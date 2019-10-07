@@ -1,8 +1,8 @@
 <textarea id=t rows=20 style="width: 100%">ï¿½ï¿½</textarea>
-<button id=b>¿½½ïï¿</button>
+<button id=b>¿½½ïï¿</button><label><input id=c checked type=checkbox>ä»…å¤„ç†å«"ï¿½ï¿½"çš„å­—ç¬¦ä¸²</label>
 <script>
 function b::onclick(){
-if(!~t.value.indexOf("ï¿½ï¿½"))return;
+if(c.checked && !~t.value.indexOf("ï¿½ï¿½"))return;
 with(new ActiveXObject("ADODB.Stream")){
   Type = 2;
   Charset = "GB2312";
